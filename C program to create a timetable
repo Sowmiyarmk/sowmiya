@@ -1,0 +1,31 @@
+
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    int a;
+    printf("Enter the period number:");
+    scanf("%d",&a);
+    switch(a){
+case 1:
+    printf("Subject:SCIENCE\n");
+    printf("Time:8am-9am\n");
+    break;
+case 2:
+    printf("Subject:MATHS\n");
+    printf("Time:11am-12am\n");
+    break;
+case 3:
+    printf("Subject:SOCIAL\n");
+    printf("Time:1pm-2pm\n");
+    break;
+case 4:
+    printf("Subject:DRAWING\n");
+    printf("Time:3PM:4pm\n");
+    break;
+    default:
+    printf("ONLY 4 CLASSES YOU CAN TAKE UR FREEDOM\n");
+}
+return 0;
+}
