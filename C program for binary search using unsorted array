@@ -1,0 +1,67 @@
+#include <stdio.h>
+
+int main() {
+    int a, b, glass, j, arr[100];
+
+    // Input number of elements
+    printf("Give number of elements: ");
+    scanf("%d", &a);
+
+    // Input array elements
+    printf("Enter the elements:\n");
+    for (b = 0; b < a; b++)
+        {
+        scanf("%d", &arr[b]);
+    }
+
+    // Bubble sort
+    for (b = 0; b < a - 1; b++) {
+        for (j = 0; j < a - b - 1; j++)
+            {
+            if (arr[j] > arr[j + 1])
+            {
+                glass = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = glass;
+            }
+        }
+    }
+
+    // Print sorted array
+    printf("Sorted array:\n");
+    for (b = 0; b < a; b++)
+    {
+        printf("%d ", arr[b]);
+    }
+    printf("\n");
+
+    // Binary search
+    int key, low = 0, high = a - 1, mid, found = 0;
+    printf("Enter the element to search: ");
+    scanf("%d", &key);
+
+    while (low <= high) {
+        mid = (low + high) / 2;
+        if (arr[mid] == key)
+            {
+            printf("The element is found at position %d\n", mid + 1);
+            found = 1;
+            break;
+        }
+        else if (key < arr[mid])
+            {
+            high = mid - 1;
+        }
+        else
+            {
+            low = mid + 1;
+        }
+    }
+
+    if (!found)
+        {
+        printf("Element not found\n");
+    }
+
+    return 0;
+}
