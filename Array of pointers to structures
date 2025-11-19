@@ -1,0 +1,37 @@
+#include <stdio.h>
+#include <stdlib.h>
+struct Book
+{
+    int id;
+    char title[50];
+    char author[50];
+};
+
+int main()
+{
+    struct Book b1 ={101,"C programming","Dennis Ritchie"};
+    struct Book b2={102,"Python","Guido van Rossum"};
+    struct Book b3={103,"Operating System","Silberschatz"};
+    //array of pointers
+    struct Book*books[3]={&b1,&b2,&b3};
+    int searchID;
+    int i,found;
+    printf("Enter the book id to search");
+    scanf("%d",&searchID);
+    for(i=0;i<3;i++)
+    {
+        if(books[i]->id==searchID)
+        {
+            printf("book found");
+            printf("ID: %d\n",books[i]->id);
+            printf("title: %s\n",books[i]->title);
+            printf("authopr: %s\n",books[i]->author);
+            found=1;
+            break;
+        }
+    }
+    if(!found)
+        printf("book not found");
+
+    return 0;
+}
