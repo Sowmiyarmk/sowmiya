@@ -1,0 +1,15 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+struct student
+{
+    int id;
+    char name[20];
+};
+int main()
+{
+    struct student s[4]={{174,"sowmi"},{111,"callie"},{134,"aruna"},{139,"ruqaiya"}};
+    for(int i=0;i<4;i++)
+        printf("ID:%d,Name: %s\n",s[i],s[i].name);
+    return 0;
+}
