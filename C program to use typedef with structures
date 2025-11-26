@@ -9,7 +9,7 @@ typedef struct
 } Employee;
 int main()
 {
-    Employee e1={1001,"Kiran",45000.50};
+    Employee e1={1001,"shalu",45000.50};
     printf("Employee ID:%d\n",e1.emp_id);
     printf("Name:%s\n",e1.name);
     printf("Salary:%.2f\n",e1.salary);
