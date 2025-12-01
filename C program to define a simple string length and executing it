@@ -1,0 +1,8 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char w[]="welcome to C programming";
+    printf("LENGTH: %lu",strlen(w));
+    return 0; 
+    }
