@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char w[]="welcome";
+    char w1[]="banana";
+    int result = strcmp(w,w1);
+    printf("result= %d",result);
+    return 0;
+    }
