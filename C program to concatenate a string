@@ -1,0 +1,10 @@
+#include<stdio.h>
+#include<string.h>
+int main()
+{
+    char w[]="welcome ";
+    char w1[]="to C programming";
+    strcat(w,w1);
+    printf("Result = %s",w);
+    return 0;
+    }
