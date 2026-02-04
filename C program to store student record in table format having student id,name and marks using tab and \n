@@ -1,0 +1,14 @@
+#include <stdio.h>
+#include <stdlib.h>
+int main()
+{
+    int id[] = {101,102,103,104,105,106};
+    char branch[][100] ={"BTCE","BTIT","BECSE","EEE","ECE","CIVIL"};
+    char name[][100] ={"Abi","Anu","Aathi","Schin","Babu","Arivth"};
+    printf("\nID\t\tNAME\t\tBRANCH\n");
+    for(int i=0;i<6;i++)
+    {
+        printf("\n%d\t\t%s\t\t%s\n",id[i],name[i],branch[i]);
+    }
+    return 0;
+}
