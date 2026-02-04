@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+struct student
+{
+    int id;
+    char name[30];
+    int sem;
+    char branch[20];
+    char dept[30];
+};
+
+int main()
+{
+    struct student s[5];
+
+    for(int i = 0; i < 5; i++)
+    {
+        printf("\nENTER THE DETAILS OF STUDENT %d\n", i + 1);
+
+        printf("ID : ");
+        scanf("%d", &s[i].id);
+
+        printf("NAME : ");
+        scanf(" %[^\n]", s[i].name);
+
+        printf("SEMESTER : ");
+        scanf("%d", &s[i].sem);
+
+        printf("BRANCH : ");
+        scanf(" %[^\n]", s[i].branch);
+
+        printf("DEPARTMENT : ");
+        scanf(" %[^\n]", s[i].dept);
+
+        printf("----------------------\n");
+    }
+
+    // Printing in table format
+    printf("\n%-10s %-20s %-5s %-10s %-20s\n",
+           "ID", "Name", "SEM", "Branch", "Department");
+    printf("---------------------------------------------------------------\n");
+
+    for(int i = 0; i < 5; i++)
+    {
+        printf("%-10d %-20s %-5d %-10s %-20s\n",
+               s[i].id, s[i].name, s[i].sem, s[i].branch, s[i].dept);
+    }
+
+    return 0;
+}
