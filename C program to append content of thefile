@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *fp;
+    int ch;
+    fp=fopen("data.txt","a");
+    if(fp==NULL)
+    {
+        printf("File cannot be opened");
+        return 1;
+    }
+    fprintf(fp,"Learning C program is easy");
+    fclose(fp);
+    printf(" Data is appenend Successfull");
+    return 0;
+}
