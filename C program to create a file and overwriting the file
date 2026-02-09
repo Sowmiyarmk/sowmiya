@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main()
+{
+    FILE *fp;fp=fopen("data.txt","w");
+    if(fp==NULL)
+    {
+        printf("file cannot be opened");
+        return 1;
+    }
+    fprintf(fp,"welcome to c\n");
+    fprintf(fp,"welcome to c\n");
+    fclose(fp);
+    printf("data");
+    return 0;
+}
+
