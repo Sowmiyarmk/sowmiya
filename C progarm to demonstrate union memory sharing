@@ -1,0 +1,25 @@
+#include <stdio.h>
+#include <stdlib.h>
+union Data
+   {
+        int i;
+        float f;
+        char ch;
+    };
+    int main()
+    {
+      union Data d;
+      d.i=10;
+      printf("d.i = %d\n",d.i);
+      d.f=5.75;
+      printf("d.i = %2f\n",d.f);
+      d.ch='A';
+      printf("d.i = %c\n",d.ch);
+      //Notice previous values are overwritten
+      printf("\n----- After all assignments-----\n");
+      printf("d.i= %d(garbage)\n",d.i);
+      printf("d.f= %2f(garbage)\n",d.f);
+      return 0;
+    }
+
+
