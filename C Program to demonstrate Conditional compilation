@@ -1,0 +1,12 @@
+#include<stdio.h>
+#define DEBUG //comment this line to disable debug message
+int main()
+{
+    int a=10,b=4,sum;
+    sum=a+b;
+    #ifdef DEBUG
+    printf("Debug:a=%d,b=%d\n",a,b);
+    #endif // DEBUG
+    printf("SUM =%d\n",sum);
+    return 0;
+}
